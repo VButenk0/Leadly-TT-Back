@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 import path from "path";
 
-const booksPath = path.resolve("db", "books.json");
+const booksPath = path.resolve("data", "books.json");
 
 const updateBooks = (books) =>
   fs.writeFile(booksPath, JSON.stringify(books, null, 2));
@@ -32,13 +32,14 @@ export const editBook = async (bookIsbn, data) => {
 
 export const removeBook = async (bookIsbn) => {
   const books = await allBooks();
-  const index = books.findIndex((item) => item.isbn === bookIsbn);
+  const index = books.findIndex((item) => item.isbn == bookIsbn);
+
   if (index === -1) {
     return null;
   }
-  const [removedBook] = books.splice(index, 1);
+
+  books.splice(index, 1);
   await updateBooks(books);
-  return removedBook;
 };
 
 export const lendBook = async (bookIsbn) => {

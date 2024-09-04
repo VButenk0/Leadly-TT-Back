@@ -9,6 +9,54 @@
     "isbn": "978-1-56619-909-4",
     "title": "The Hobbit",
     "author": "J.R.R. Tolkien",
-    "isBorrowed": true
+    "isBorrowed": false
+  },
+  {
+    "isbn": "978-5-42783-520-6",
+    "title": "Harry Potter and the Chamber of Secrets",
+    "author": "J.K. Rowling",
+    "isBorrowed": false
+  },
+  {
+    "isbn": "978-2-74859-301-7",
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "isBorrowed": false
+  },
+  {
+    "isbn": "978-5-92849-596-0",
+    "title": "The Little Prince",
+    "author": "Antoine de Saint-Exupery",
+    "isBorrowed": false
+  },
+  {
+    "isbn": "978-3-85728-239-4",
+    "title": "A Tale of Two Cities",
+    "author": "Charles Dickens",
+    "isBorrowed": false
+  },
+  {
+    "isbn": "978-4-73829-585-6",
+    "title": "The Lion, the Witch and the Wardrobe",
+    "author": "C.S. Lewis",
+    "isBorrowed": false
+  },
+  {
+    "isbn": "978-4-56749-382-7",
+    "title": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "isBorrowed": false
+  },
+  {
+    "isbn": "978-3-57984-803-2",
+    "title": "Don Quixote",
+    "author": "Miguel de Cervantes",
+    "isBorrowed": false
+  },
+  {
+    "isbn": "978-5-38902-473-2",
+    "title": "And Then There Were None",
+    "author": "Agatha Christie",
+    "isBorrowed": false
   }
 ]

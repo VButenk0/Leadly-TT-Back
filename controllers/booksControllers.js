@@ -51,7 +51,7 @@ export const updateBook = async (req, res, next) => {
 export const deleteBook = async (req, res, next) => {
   try {
     const { isbn } = req.params;
-    await removeBook(isbn);
+    const result = await removeBook(isbn);
 
     if (!result) {
       throw HttpError(404);
@@ -67,6 +67,9 @@ export const borrowBook = async (req, res, next) => {
   try {
     const { isbn } = req.params;
     const result = await lendBook(isbn);
+    if (!result) {
+      throw HttpError(404);
+    }
     res.json(result);
   } catch (error) {
     next(error);
