@@ -78,8 +78,8 @@ export const borrowBook = async (req, res, next) => {
 
 export const searchBook = async (req, res, next) => {
   try {
-    const { isbn } = req.params;
-    const result = await findBook(isbn);
+    const { query } = req.query;
+    const result = await findBook(query);
 
     if (!result) {
       throw HttpError(404);

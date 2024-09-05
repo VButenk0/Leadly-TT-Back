@@ -20,6 +20,6 @@ booksRouter.delete("/:isbn", deleteBook);
 
 booksRouter.patch("/:isbn/borrow", borrowBook);
 
-booksRouter.get("/search?query=<query>", searchBook);
+booksRouter.get("/search", searchBook);
 
 export default booksRouter;

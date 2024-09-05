@@ -9,7 +9,7 @@
     "isbn": "978-1-56619-909-4",
     "title": "The Hobbit",
     "author": "J.R.R. Tolkien",
-    "isBorrowed": false
+    "isBorrowed": true
   },
   {
     "isbn": "978-5-42783-520-6",

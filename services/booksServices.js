@@ -32,7 +32,7 @@ export const editBook = async (bookIsbn, data) => {
 
 export const removeBook = async (bookIsbn) => {
   const books = await allBooks();
-  const index = books.findIndex((item) => item.isbn == bookIsbn);
+  const index = books.findIndex((item) => item.isbn === bookIsbn);
 
   if (index === -1) {
     return null;
@@ -40,6 +40,7 @@ export const removeBook = async (bookIsbn) => {
 
   books.splice(index, 1);
   await updateBooks(books);
+  return true;
 };
 
 export const lendBook = async (bookIsbn) => {
@@ -58,11 +59,14 @@ export const lendBook = async (bookIsbn) => {
   return books[index];
 };
 
-export const findBook = async (bookIsbn) => {
+export const findBook = async (query) => {
   const books = await allBooks();
-  const index = books.findIndex((item) => item.isbn === bookIsbn);
-  if (index === -1) {
-    return null;
-  }
-  return books[index];
+
+  const filteredBooks = books.filter(
+    (book) =>
+      book.title.toLowerCase().includes(query.toLowerCase()) ||
+      book.isbn.includes(query)
+  );
+
+  return filteredBooks;
 };
